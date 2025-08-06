@@ -26,6 +26,6 @@ function mostrarLista () {
     
     // Recorre la lista y muestra los nombres que vayan agregándose en el arreglo
     for (let i = 0; i < listaDeAmigos.length; i++) {
-        listaDeNombres.innerHTML += `${listaDeAmigos[i]}<br>`;
+        listaDeNombres.innerHTML += `<li>${listaDeAmigos[i]}</li>`;
     }   
 }
