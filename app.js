@@ -2,7 +2,7 @@ let listaDeAmigos = [];
 
 function agregarAmigo() {
     // Enlace entre el input el archivo html y el archivo js por DOM
-    let  = document.getElementById('amigo');
+    let nombre = document.getElementById('amigo');
     // Acceso al contenido del input
     let amigoAgregado = nombre.value;
 
