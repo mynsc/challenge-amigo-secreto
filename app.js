@@ -10,10 +10,22 @@ function agregarAmigo() {
     if (amigoAgregado != '') {
         listaDeAmigos.push(amigoAgregado);
         nombre.value = ''; // Limpia la entrada luego de añadir el nombre de un amigo
+        mostrarLista();
     }
     else {
          alert('Por favor, inserte un nombre');
     }
 
     console.log(listaDeAmigos);
+}
+function mostrarLista () {
+    // Enlace entre la lista desordenada del archivo html y el archivo js por DOM
+    let listaDeNombres = document.getElementById('listaAmigos');
+    // Limpia la lista existente para evitar duplicados
+    listaDeNombres.innerHTML = '';
+    
+    // Recorre la lista y muestra los nombres que vayan agregándose en el arreglo
+    for (let i = 0; i < listaDeAmigos.length; i++) {
+        listaDeNombres.innerHTML += `${listaDeAmigos[i]}<br>`;
+    }   
 }
