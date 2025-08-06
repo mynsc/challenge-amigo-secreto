@@ -1,14 +1,11 @@
 let listaDeAmigos = [];
-// Enlace entre el input del archivo html y el archivo js por DOM
+// Enlaces de elementos HTML con el archivo js a través del DOM
 let nombre = document.getElementById('amigo');
-// Enlace entre una etiqueta <ul>  del archivo html y el archivo js por DOM
 let listaDeNombres = document.getElementById('listaAmigos');
-// Enlace entre una etiqueta <ul> del archivo html y el archivo js por DOM
 let resultadoSorteo = document.getElementById('resultado');
 
 function agregarAmigo() {
-    // Acceso al contenido del input
-    let amigoAgregado = nombre.value;
+    let amigoAgregado = nombre.value; // Acceso al contenido del input
 
     // Verifica si la entrada no está vacía
     if (amigoAgregado != '') {
@@ -19,12 +16,10 @@ function agregarAmigo() {
     else {
          alert('Por favor, inserte un nombre');
     }
-
-    console.log(listaDeAmigos);
 }
+
 function mostrarLista() {
-    // Limpia la lista existente para evitar duplicados
-    listaDeNombres.innerHTML = '';
+    listaDeNombres.innerHTML = ''; // Limpia la lista existente para evitar duplicados
     
     // Recorre la lista y muestra los nombres que vayan agregándose en el arreglo
     for (let i = 0; i < listaDeAmigos.length; i++) {
@@ -38,9 +33,8 @@ function sortearAmigo() {
         alert('Primero debes añadir nombres');
     }
     else {
-        let indiceAleatorio = Math.floor(Math.random() * listaDeAmigos.length);
-        listaDeNombres.innerHTML = '';
+        let indiceAleatorio = Math.floor(Math.random() * listaDeAmigos.length); // Genera un número aleatorio
+        listaDeNombres.innerHTML = ''; // Limpia la lista existente
         resultadoSorteo.innerHTML = `El amigo secreto sorteado es ${listaDeAmigos[indiceAleatorio]}`;
-        
     }
 }
