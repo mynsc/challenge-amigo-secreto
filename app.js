@@ -22,7 +22,7 @@ function agregarAmigo() {
 
     console.log(listaDeAmigos);
 }
-function mostrarLista () {
+function mostrarLista() {
     // Limpia la lista existente para evitar duplicados
     listaDeNombres.innerHTML = '';
     
