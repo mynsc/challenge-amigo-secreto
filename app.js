@@ -27,5 +27,17 @@ function mostrarLista () {
     // Recorre la lista y muestra los nombres que vayan agregándose en el arreglo
     for (let i = 0; i < listaDeAmigos.length; i++) {
         listaDeNombres.innerHTML += `<li>${listaDeAmigos[i]}</li>`;
-    }   
+    }
+}
+
+function sortearAmigo() {
+    // Verifica si el arreglo tiene contenido
+    if (listaDeAmigos.length == 0) {
+        alert('Primero debes añadir nombres');
+    }
+    else {
+        let indiceAleatorio = Math.floor(Math.random() * 10) + 1;
+        
+        
+    }
 }
