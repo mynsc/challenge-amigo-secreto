@@ -9,8 +9,9 @@ function agregarAmigo() {
 
     // Verifica si la entrada no está vacía
     if (amigoAgregado != '') {
-        listaDeAmigos.push(amigoAgregado);
-        nombre.value = ''; // Limpia la entrada luego de añadir el nombre de un amigo
+        listaDeAmigos.push(amigoAgregado); //Agrega el contenido del input a la lista
+        nombre.value = ''; // Limpia el input luego de añadir el nombre de un amigo
+
         mostrarLista();
     }
     else {
@@ -33,8 +34,12 @@ function sortearAmigo() {
         alert('Primero debes añadir nombres');
     }
     else {
-        let indiceAleatorio = Math.floor(Math.random() * listaDeAmigos.length); // Genera un número aleatorio
-        listaDeNombres.innerHTML = ''; // Limpia la lista existente
+        // Genera un número aleatorio entre 0 y la longitud del arreglo
+        let indiceAleatorio = Math.floor(Math.random() * listaDeAmigos.length);
+
+        // Limpia la lista existente
+        listaDeNombres.innerHTML = '';
+
         resultadoSorteo.innerHTML = `El amigo secreto sorteado es ${listaDeAmigos[indiceAleatorio]}`;
     }
 }
